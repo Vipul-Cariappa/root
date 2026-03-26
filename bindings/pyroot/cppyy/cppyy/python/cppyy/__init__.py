@@ -177,8 +177,8 @@ class make_smartptr(object):
             return py_make_smartptr(getattr(gbl, cls), self.ptrcls)
         return self.maker[cls]
 
-# gbl.std.make_shared = make_smartptr(gbl.std.shared_ptr, gbl.std.make_shared)
-# gbl.std.make_unique = make_smartptr(gbl.std.unique_ptr, gbl.std.make_unique)
+gbl.std.make_shared = make_smartptr(gbl.std.shared_ptr, gbl.std.make_shared)
+gbl.std.make_unique = make_smartptr(gbl.std.unique_ptr, gbl.std.make_unique)
 del make_smartptr
 
 
